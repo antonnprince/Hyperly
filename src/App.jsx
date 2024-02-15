@@ -1,10 +1,12 @@
 import './App.css';
 import Nav from './Nav'
+import Create from './Create';
 
 function App() {
   return (
-    <div className="">
+    <div className="flex flex-row">
         <Nav />
+        <Create/>
     </div>
   );
 }
