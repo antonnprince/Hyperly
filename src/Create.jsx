@@ -1,6 +1,7 @@
 import React from 'react'
-import Button from './components/button'
+import Button from './button'
 import { useState } from 'react';
+
 
 const Create = () => {
   const [inputValue,setInputValue] = useState("")
@@ -49,7 +50,7 @@ const Create = () => {
       </div>
     </div>
   </section>
-
+<Button />
     </div>
   )
 }
