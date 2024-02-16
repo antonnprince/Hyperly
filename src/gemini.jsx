@@ -7,9 +7,9 @@ export const linkedin = async()=>{
   try{
     const model = genAI.getGenerativeModel({model:"gemini-pro"});
 
-  const result = await model.generateContent("What is 1+1");
+  const result = await model.generateContent("hello gemini");
 
-  const response = await result.reponse;
+  const response = result.response;
   console.log(response);
 
   return response.text()
