@@ -4,6 +4,7 @@ import { generatePost } from './gemini';
 const Button = ({ inputValue, product, industry }) => {
   const [res, setRes] = useState('');
   const [clicked, setClicked] = useState(false); // State to track if button is clicked
+  const[count,setCount] = useState(0)
 
   const handleRes = async ({ name, product, industry }) => {
     try {
@@ -19,7 +20,8 @@ const Button = ({ inputValue, product, industry }) => {
       <button
         onClick={() => {
           handleRes({ inputValue, product, industry });
-          setClicked(true); // Update clicked state when button is clicked
+          setClicked(true);
+          setCount(()=>count+1) // Update clicked state when button is clicked
         }}
         className="cursor-pointer transition-all bg-gray-900 text-white text-xl font-semibold px-6 py-2 rounded-lg
         border-blue-600
