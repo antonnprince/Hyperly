@@ -26,16 +26,17 @@ const Button = ({ inputValue, product, industry }) => {
         border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
         active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
       >
-        Submit Results
+        Generate content
       </button>
 
-      <div className='text-xl text-black font-semibold'>
+      <div className='text-xl text-black'>
         {res ? (
-          <>
+          <div className='mx-4 w-full font-normal bg-slate-200'>
+
             <h1>Linkedin post content</h1>
             <br />
             {res}
-          </>
+          </div>
         ) : clicked ? ( // Show spinner only if button is clicked
           <div className="animate-spin mx-auto rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
         ) : null} {/* Don't show anything if button is not clicked */}

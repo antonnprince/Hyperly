@@ -1,13 +1,28 @@
 import './App.css';
-import Nav from './Nav'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Nav from './Nav';
 import Create from './Create';
+import Dash from './Dash';
 
 function App() {
   return (
-    <div className="flex flex-row bg-slate-200">
+    <Router>
+      <div className="flex flex-row bg-slate-200">
         <Nav />
-        <Create/>
-    </div>
+        <Switch>
+          <Route path="/create">
+            <Create />
+          </Route>
+          <Route path="/dashboard">
+            <Dash />
+          </Route>
+          {/* Default route */}
+          <Route path="/">
+            <Create />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

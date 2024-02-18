@@ -12,9 +12,9 @@ export const generatePost = async({name,product,industry})=>{
   Generate impactful Linkedin posts tailored to "${product}" which is the product I aim to sell,
   which mainly focuses on ${industry} as the main industry(s).The name of the product is "${name}.
    Make the content  buyer-specific. Generate the content for post as bullet points,
-  with each point starting by a star emoji. Also generate the content without special headings like headline, also dont generate target audience.
+  with each point starting by a star emoji.Generate the content without special headings like headline, also dont generate target audience.
     Also generate hashtags which can improve SEO and generate each point line by line for improved readability.
-
+    Print each point at the next line after the star emoji. Include the necessary emojis needed to make the content look amazing
   `);
 
 
