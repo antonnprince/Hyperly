@@ -4,7 +4,7 @@ import Create from './Create';
 
 function App() {
   return (
-    <div className="flex flex-row bg-gray-400">
+    <div className="flex flex-row bg-slate-200">
         <Nav />
         <Create/>
     </div>
