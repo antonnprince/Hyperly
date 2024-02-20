@@ -3,7 +3,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Create from './Create';
 import Nav from './Nav';
 import Dash from './Dash';
-
+import NoPage from './NoPage';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
             <Route path='/' element={<Nav />}> 
             <Route index element={<Dash/>} />
             <Route path="/create" element={<Create/>} />
+            <Route path="*" element={<NoPage />} />
             </Route>
           
       </Routes>

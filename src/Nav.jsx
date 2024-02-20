@@ -27,9 +27,9 @@ const Nav = () => {
         Create 🔍 </Link>
         </ul>
         
-        <ul  className='hover:text-gray-400 delay-150'>Insights  📉</ul>
-        <ul  className='hover:text-gray-400 delay-150'>Organizations  🏛️</ul>
-        <ul  className='hover:text-gray-400 delay-150'>Settings   🧩</ul>
+        <ul  className='hover:text-gray-400 delay-150'>  <Link to="*">Insights  📉  </Link></ul>
+        <ul  className='hover:text-gray-400 delay-150'>  <Link to="*">Organizations  🏛️  </Link></ul>
+        <ul  className='hover:text-gray-400 delay-150'>  <Link to="*">Settings   🧩  </Link></ul>
         
       </li>
       
