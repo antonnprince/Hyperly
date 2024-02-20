@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { generatePost } from './gemini';
 
-const Button = ({ inputValue, product, industry }) => {
+export const Button = ({ inputValue, product, industry }) => {
   const [res, setRes] = useState('');
   const [clicked, setClicked] = useState(false); // State to track if button is clicked
-  const[count,setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const handleRes = async ({ name, product, industry }) => {
     try {
@@ -21,20 +21,16 @@ const Button = ({ inputValue, product, industry }) => {
         onClick={() => {
           handleRes({ inputValue, product, industry });
           setClicked(true);
-          setCount(()=>count+1) // Update clicked state when button is clicked
+          setCount(count + 1); // Update clicked state when button is clicked
         }}
-        className="cursor-pointer transition-all bg-gray-900 text-white text-xl font-semibold px-6 py-2 rounded-lg
-        border-blue-600
-        border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
-        active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+        className="bg-[#369EFF] p-2 px-8 rounded-2xl font-thin text-lg"
       >
         Generate content
       </button>
 
-      <div className='text-xl text-black'>
+      <div className='text-xl text-white'>
         {res ? (
-          <div className='mx-4 w-full font-normal bg-slate-200'>
-
+          <div className='mx-4 w-full font-normal bg-[#141414]'>
             <h1>Linkedin post content</h1>
             <br />
             {res}
@@ -48,3 +44,5 @@ const Button = ({ inputValue, product, industry }) => {
 };
 
 export default Button;
+
+ // Exporting the count variable

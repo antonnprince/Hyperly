@@ -7,7 +7,7 @@ import Dash from './Dash';
 
 function App() {
   return (
-    <div className="flex flex-row bg-slate-200 h-screen">
+    <div className="flex flex-row bg-[#141414] h-screen">
     <BrowserRouter>
       <Routes>
             <Route path='/' element={<Nav />}> 
