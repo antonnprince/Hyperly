@@ -30,13 +30,13 @@ export const Button = ({ inputValue, product, industry }) => {
 
       <div className='text-xl text-white'>
         {res ? (
-          <div className='mx-4 w-full font-normal bg-[#141414]'>
+          <div className=' w-auto font-normal  mt-4 bg-[#141414]'>
             <h1>Linkedin post content</h1>
             <br />
             {res}
           </div>
         ) : clicked ? ( // Show spinner only if button is clicked
-          <div className="animate-spin mx-auto rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+          <div className="animate-spin mx-auto rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-200"></div>
         ) : null} {/* Don't show anything if button is not clicked */}
       </div>
     </div>

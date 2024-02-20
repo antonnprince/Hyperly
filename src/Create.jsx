@@ -11,16 +11,16 @@ const Create = () => {
   return (
     <div className='ml-72 space-y-20 h-screen'>
     
-      <h1 className='text-xl text-white font-semibold  p-8 mx-32'>
-    Create New Post</h1>
+      <h1 className='text-5xl text-left text-white font-semibold py-8'>
+    Create a new Post</h1>
 
-    <section className='mx-auto text-xl font-normal w-3/4 space-y-12 text-white'>
+    <section className=' text-xl font-normal  w-[667px] space-y-8 text-white'>
     <div>
       <h2>Product Name</h2>
       <div className='input '>
         <input
         placeholder='Eg: Air Jordans'
-        className='border-solid p-2 bg-[#2E3B45] text-lg text-[#9CABBA] w-full rounded-xl focus:outline-none'
+        className='border-solid px-1 my-2 py-2 bg-[#2E3B45] text-lg text-[#9CABBA] w-11/12 w-max-11/12 rounded-xl focus:outline-none'
         type='text'
         value={name}
         onChange={(e)=>setname(e.target.value)}
@@ -33,7 +33,7 @@ const Create = () => {
       <div className='input '>
         <input
         placeholder='Eg: Shoe,Fashion'
-        className='border-solid p-2 bg-[#2E3B45] text-lg text-[#9CABBA] w-full rounded-xl focus:outline-none'
+        className='border-solid px-1 py-2 my-2 bg-[#2E3B45] text-lg text-[#9CABBA] w-11/12 w-max-11/12 rounded-xl focus:outline-none'
         type='text'
         value={industry}
         onChange={(e)=>setIndustry(e.target.value)}
@@ -44,19 +44,24 @@ const Create = () => {
     <div>
       <h2>What is your product?</h2>
       <div className='input '>
-        <input
-        placeholder='Shoes'
-        className='border-solid p-2 bg-[#2E3B45] text-lg  text-[#9CABBA] w-full rounded-xl focus:outline-none'
+        <textarea
+        placeholder='Give a brief description'
+        className='border-solid px-1 py-2 my-2 bg-[#2E3B45] text-lg  text-[#9CABBA]  w-11/12 w-max-11/12 rounded-xl focus:outline-none'
         type='text'
         value={product}
         onChange={(e)=>setProduct(e.target.value)}
          />
+         
       </div>
+
+      <Button name={name} product={product} industry={industry}/>
     </div>
-    <Button name={name} product={product} industry={industry}/>
-  </section>
- 
-    </div>
+   
+  </section>   
+
+
+  </div>
+    
   )
 }
 
